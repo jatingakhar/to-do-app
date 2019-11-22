@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<style>
+body {background-color: powderblue;}
+div  {color: blue;}
+p    {color: red; text-align:center;}
+
+</style>	
+<title>To do</title>
+ 
+<link rel="stylesheet" type="text/css" href="">
+
+</head>
+
+<body>
+	
+<div class="div1">
+<h1><font><u><i>To-Do App</i></u></font></h1>
+	
+<input type="text" id="Remname" placeholder="Enter Task Here">
+	
+<input id="btn1" class="b" type="Button" value="Create"  name="">
+
+<input id="btn2" class="b" type="Button" value="Delete">
+
+<p id="demo" >
+ 
+<ul id="list" type="none";>
+</ul>
+</div>
+	
+<script type="text/javascript">
+
+   	var z=document.getElementById('btn1');
+
+    	console.log(z);
+ 
+    	z.addEventListener('click',Insert);
+	
+function Insert()
+{
+			
+	var n =document.getElementById("Remname").value;
+
+	var para=document.createElement("li");
+	
+	var node=document.createTextNode(n);
+
+	para.appendChild(node);
+
+	para.id=n;
+		
+	var element =document.getElementById('list');
+
+	element.appendChild(para);
+  
+  	document.getElementById("Remname").value="";
+
+}
+	
+</script>
+
+</body>
+
+</html>
